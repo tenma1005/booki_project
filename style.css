@@ -1,0 +1,901 @@
+/* /A/ Styles généraux*/
+
+* {
+  font-family: Raleway;
+}
+
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  /*pour retirer le petit bout de gras sur les côtés de la page...*/
+}
+
+main,
+nav,
+header {
+  margin-left: 5%; /*les deux c'est pour centrer*/
+  margin-right: 5%;
+}
+/*centre les éléments au centre de la page*/
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Pour espacer les éléments au max*/
+.flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*même chose mais laissera une marge au début et à la fin*/
+.flexAround {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flexColumnCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flexColumnBetween {
+  display: flex;
+
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.flexColumnAround {
+  display: flex;
+
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.textStrong {
+  font-weight: bold;
+}
+
+.deleteBorder {
+  border: none;
+}
+
+/* /B/ Style Navbar*/
+
+nav {
+  height: 100px;
+}
+
+/*taille de la barre de nav par rapport au parent 20% du body*/
+.sizeNavLink {
+  width: 100%;
+}
+
+.NavLink1 {
+  color: #0065fc;
+}
+
+.NavLink2 a:hover {
+  color: #0065fc;
+}
+
+/*taille des box de la barre de navigation*/
+.sizeLink {
+  width: 140px;
+  height: 97px;
+}
+
+/*les 4 styles pour la bordure au dessus et faire un parfait alignement entre les 3*/
+.navBorder1 {
+  border-top: 3px solid #0065fc;
+}
+
+.navBorder1:hover {
+  cursor: pointer;
+}
+
+.navBorder2 {
+  border-top: 3px solid transparent;
+}
+
+.navBorder2:hover {
+  border-top: 3px solid #0065fc;
+  cursor: pointer;
+}
+
+.navBorder2:hover > a {
+  color: #0065fc; /*pour que le texte du lien change de couleur même quand on pointe sur le parent et pas que mots*/
+}
+
+.logoBorder {
+  border-top: 3px solid transparent;
+}
+
+/* /C/ HEADER*/
+
+.borderSearch {
+  width: 420px;
+  border-radius: 10px;
+}
+
+.search {
+  height: 50px;
+  width: 230px;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.Icon {
+  height: 50px;
+  width: 60px;
+  background-color: #f2f2f2;
+  border-radius: 10px 0px 0px 10px;
+}
+
+/*Qui va permettre d'espacer le texte de l'imput pour ne pas le coller à l'input*/
+.paddingSearch {
+  padding-left: 20px;
+}
+
+.paddingSearchButton {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.borderSearch {
+  border: 1px solid transparent;
+}
+
+.searchButton {
+  background-color: #0065fc;
+  height: 50px;
+  width: 120px;
+  color: white;
+  cursor: pointer;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.searchButton:hover {
+  color: #0065fc;
+  background-color: #f2f2f2;
+}
+
+/* /D/ style barre de filtres*/
+
+.rechercheFiltre {
+  display: flex;
+}
+.rechercheFiltre span {
+  font-weight: bold;
+}
+.rechercheFiltre i {
+  background-color: #deebff;
+  padding: 20px;
+  border-radius: 100%;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.flexFilter {
+  display: flex;
+  align-items: center;
+}
+
+.margFilter {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.filterName {
+  margin-right: 20px;
+}
+
+.IconsAndTextFilters2 {
+  border: 2px solid #f2f2f2;
+  height: 56px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.IconsAndTextFilters2:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.iconsFilters2 {
+  color: #0065fc;
+  margin-left: -5px;
+}
+
+.textFilter {
+  padding: 20px;
+  height: 50px;
+}
+
+/* /E/ Phrase de l'icon i */
+
+.iIcon {
+  border-radius: 25px;
+  border: 1px solid #deebff;
+  color: #0065fc;
+  width: 25px;
+  height: 25px;
+}
+
+.iIconAndText {
+  display: flex;
+  align-items: center;
+}
+
+.textIicon {
+  padding-left: 15px;
+}
+
+/* /F/ Hébergements + Populaires */
+
+.hebergementBox {
+  flex: 2; /*on peut car le parent à déjà un display flex*/
+  background-color: #f2f2f2;
+  height: 900px; /*700px ça ne rentre pas...*/
+  margin-right: 20px;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 20px;
+}
+
+.populaireBox {
+  flex: 1;
+  background-color: #f2f2f2;
+  height: 900px;
+  margin-left: 20px;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 20px;
+}
+
+.blueStar {
+  color: #0065fc;
+}
+
+.greyStar {
+  color: #f2f2f2;
+}
+
+/* /a/ hébergements */
+
+.hebergementImage1 {
+  background-image: url("images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+}
+
+.hebergementImage2 {
+  background-image: url("images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+}
+
+.hebergementImage3 {
+  background-image: url("images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+}
+
+.hebergementImage4 {
+  background-image: url("images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+}
+
+.hebergementImage5 {
+  background-image: url("images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+}
+
+.hebergementImage6 {
+  background-image: url("images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+}
+
+.hebergementbloc1 {
+  margin-bottom: 20px;
+}
+
+.hebergementbloc2 {
+  margin-top: 20px;
+}
+
+.hebergementCardDescription {
+  width: 90%;
+  height: 150px;
+}
+
+.hebergementCardDescription h4 {
+  margin-block-start: 10%;
+  margin-block-end: 5%;
+}
+
+.hebergementCardDescription p {
+  margin-block-start: 5%;
+  margin-block-end: 5%;
+}
+
+.hebergementCard {
+  background-color: white;
+  width: 30%;
+  height: auto; /*200px n'était pas assez...*/
+  padding: 0.5%;
+  border-radius: 20px;
+  box-shadow: 0 0 16px #0000002e;
+}
+
+.hebergementCard:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1140px) {
+  .hebergementCard:hover {
+    transform: scale(1.03); /*va grossir un peu la carte pointer*/
+  }
+}
+
+/* /b/ populaires */
+
+.populaireCard {
+  background-color: white;
+  height: auto;
+  padding: 1% 0 1% 1%;
+  border-radius: 15px 15px 15px 15px;
+
+  box-shadow: 0 0 16px #0000002e;
+}
+
+.populaireCard:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1140px) {
+  .populaireCard:hover {
+    transform: scale(1.03); /*va grossir un peu la carte pointer*/
+  }
+}
+.flexpop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.populaireCardDescription {
+  padding-left: 5%;
+
+  width: 60%;
+}
+
+.CardPopulaire1And2 {
+  margin-bottom: 10%;
+}
+
+.populaireImage1 {
+  background-image: url("images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 35%;
+  height: 160px;
+  border-radius: 15px 0 0 15px;
+}
+
+.populaireImage2 {
+  background-image: url("images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 35%;
+  height: 160px;
+  border-radius: 15px 0 0 15px;
+}
+
+.populaireImage3 {
+  background-image: url("images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 35%;
+  height: 160px;
+  border-radius: 15px 0 0 15px;
+}
+
+/* /G/ Activités */
+
+.activity {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.activityBoxs {
+  width: 100%;
+  height: 600px;
+}
+
+.activitybox {
+  width: 23%;
+  border-radius: 15px;
+  box-shadow: 0 0 16px #0000002e;
+}
+
+.activitybox:hover,
+.activityMinibox:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1140px) {
+  .activitybox:hover,
+  .activityMinibox:hover {
+    cursor: pointer;
+    transform: scale(1.03); /*va grossir un peu la carte pointer*/
+  }
+}
+.activityMiniBoxs {
+  width: 23%;
+  height: 600px;
+}
+
+.activityMinibox {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 16px #0000002e;
+}
+
+.titleActivity {
+  height: 70px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 5%;
+  width: 95%;
+}
+
+.activityImage1 {
+  background-image: url("images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 530px;
+  border-radius: 15px 15px 0 0;
+}
+
+.activityImage2a {
+  background-image: url("images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 250px;
+  border-radius: 15px 15px 0 0;
+}
+
+.activityImage2b {
+  background-image: url("images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 150px;
+  border-radius: 15px 15px 0 0;
+}
+
+.activityImage3 {
+  background-image: url("images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 530px;
+  border-radius: 15px 15px 0 0;
+}
+
+.activityImage4a {
+  background-image: url("images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 200px;
+  border-radius: 15px 15px 0 0;
+}
+
+.activityImage4b {
+  background-image: url("images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
+  background-size: cover; /*rendre l'image par rapport à la taille de l'élément */
+  background-position: center; /*pour afficher le centre de l'image*/
+  width: 100%;
+  height: 200px;
+  border-radius: 15px 15px 0 0;
+}
+
+/* /H/ Pied de page (footer) */
+
+.footer {
+  background-color: #f2f2f2;
+  margin-top: 100px;
+  height: 300px;
+}
+
+.marginFootRight {
+  margin-right: 30%;
+}
+
+.marginFootLeft {
+  margin-left: 5%;
+}
+
+.footbox {
+  height: 150px;
+}
+
+.lienFooter {
+  height: 40px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1140px) {
+  .flexFilterPhone {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .margFilter {
+    margin-top: 5%;
+    margin-left: 0;
+  }
+
+  .IconsAndTextFilters2 {
+    margin-bottom: 0;
+  }
+
+  .flexFilter3 {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+
+  .textFilter {
+    font-size: 16px;
+  }
+
+  .marginFootRight {
+    margin-right: 5%;
+  }
+
+  #hebergements {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .populaireBox {
+    width: 100%;
+    flex: none;
+    border-radius: 0 0 0 0;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    padding-top: 5%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 5%;
+  }
+
+  .populaireBoxTextPhone {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .populaireCard {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .hebergementBox {
+    background-color: white;
+    flex: none;
+    width: 90%;
+    margin-right: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .hebergementCardDescription {
+    min-height: auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .phoneNav2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .phoneNavBar {
+    width: 100%;
+  }
+
+  .navBorder1 {
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid #0065fc;
+  }
+
+  .navBorder2 {
+    border-bottom: 3px solid #f2f2f2;
+  }
+
+  .navBorder2:hover {
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid #0065fc;
+  }
+
+  .sizeLink {
+    order: 1;
+    width: 100%;
+    margin-left: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .margFilter {
+    margin-bottom: 0;
+  }
+
+  .hebergementBox {
+    height: auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .hebergementbloc1 {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .hebergementbloc2 {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .hebergementCard {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  .hebergementCardDescription h4 {
+    margin-block-start: 2%;
+    margin-block-end: 0;
+  }
+
+  .hebergementCardDescription p {
+    margin-block-start: 1%;
+    margin-block-end: 5%;
+  }
+
+  .activityBoxs {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .activitybox {
+    width: 90%;
+    margin-bottom: 10%;
+    height: auto;
+  }
+
+  .activityMiniBoxs {
+    width: 90%;
+
+    height: auto;
+  }
+
+  .activityMinibox {
+    width: 100%;
+    margin-bottom: 10%;
+    height: auto;
+  }
+
+  .activityImage1,
+  .activityImage2a,
+  .activityImage2b,
+  .activityImage3,
+  .activityImage4a,
+  .activityImage4b {
+    height: 200px;
+  }
+
+  .footer {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    padding-left: 5%;
+    margin-top: 0;
+  }
+
+  .footbox {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: auto;
+  }
+
+  .marginFootLeft {
+    margin-left: 0;
+  }
+
+  .marginFootRight {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /*petite correction mineure...*/
+  .populaireBox {
+    margin-right: 30px;
+  }
+
+  .hebergementBox {
+    margin-left: 30px;
+  }
+
+  .activity {
+    margin-right: 30px;
+
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filterName h3 {
+    font-size: 20px;
+  }
+
+  .textFilter {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  body {
+    margin-right: 0;
+  }
+
+  .borderSearch {
+    width: auto;
+    border: none;
+  }
+
+  .search {
+    width: 200px;
+    border-bottom: 1px solid #f2f2f2;
+    border-top: 1px solid #f2f2f2;
+  }
+
+  .searchButton {
+    width: 20px;
+    border-radius: 15px;
+  }
+
+  .phoneMode {
+    display: block;
+  }
+
+  .desktopMode {
+    /*efface les mots dans le span qui à cette classe, pour ce cas on fait sauté le mots "rechercher"*/
+    display: none;
+  }
+
+  .borderSearch {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: start;
+  }
+
+  .flexFilter {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .activityImage1,
+  .activityImage2a,
+  .activityImage2b,
+  .activityImage3,
+  .activityImage4a,
+  .activityImage4b {
+    height: 120px;
+  }
+
+  .activity h2 {
+    font-size: 20px;
+    margin-left: 5%;
+  }
+
+  .titleActivity h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .phoneMode {
+    /*retire la loupe au delà de 930px*/
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 22px;
+    margin-top: 30px;
+  }
+  .sizeLink {
+    height: 50px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .textNavLink {
+    font-size: 16px;
+  }
+
+  .iIconAndText {
+    padding-top: 20px;
+  }
+
+  .activity h3 {
+    font-size: 22px;
+    margin-left: 5%;
+  }
+}
